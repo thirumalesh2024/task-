@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h2><center>General Bus Pass Application</center></h2>
+</head>
+<body>
+    <!-- Name attribute should be used with input tag -->
+    <form action="./response.html" method="get">
+
+        <!-- fieldset tag -->
+        <fieldset>
+            <legend><b>Applicant Details</b></legend>
+
+            <!-- table -->
+             <table>
+                <!-- first row -->
+                <tr>
+                    <td>
+                        <!-- first name -->
+                        <label for="firstname">First Name: </label>
+                        <input type="text" name="firstname" id="firstname" required maxlength="20"> <br>
+                    </td>
+                    <td>
+                        <!-- Guardian's name -->
+                        <label for="guardianname">Father/Guardian Name:</label>
+                        <input type="text" name="guardianname" id="guardianname" required> <br>
+                    </td>
+                </tr>
+                <!-- second row -->
+                <tr>
+                    <td>
+                        <!-- date of birth -->
+                        <label for="dateofbirth">Date Of Birth:</label>
+                        <input type="date" name="dateofbirth" id="dateofbirth" required> <br>
+                    </td>
+                    <td>
+                        <!-- gender -->
+                        <label for="gender">Gender:</label>
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="female" required> <br>
+                    </td>
+                </tr>
+                <!-- third row  -->
+                <tr>
+                    <td>
+                        <!-- Age As On -->
+                         <p>Age As On:</p>
+                        <label for="ageasonyears"></label>
+                        <input type="text" name="ageasonyears" id="ageasonyears" required size="1" maxlength="2"> <p>years</p>
+                        <label for="ageasonmonths"></label>
+                        <input type="text" name="ageasonmonths" id="ageasonmonths" required size="1" maxlength="2"> <p>months</p>
+                        <label for="ageasondays"></label>
+                        <input type="text" name="ageasondays" id="ageasondays" required size="1" maxlength="3"> <p>days</p>
+                    </td>
+                    <td>
+                        <!-- Aadhar No -->
+                        <label for="aadharnumber">Aadhar Number:</label>
+                        <input type="text" name="aadharnumber" id="aadharnumber" required maxlength="12"> <br>
+                    </td>
+                </tr>
+                <!-- fourth row -->
+                <tr>
+                    <td>
+                        <!-- mobile number -->
+                        <label for="mobilenumber">Mobile Number:</label>
+                        <input type="text" name="mobilenumber" id="mobilenumber" required maxlength="10"> <br>
+                    </td>
+                    <td>
+                        <!-- email id -->
+                        <label for="emailaddress">Email Address:</label>
+                        <input type="email" name="emailaddress" id="emailaddress" required> <br>
+                    </td>
+                </tr>
+                <!-- fifth row -->
+                <tr>
+                    <td>
+                        <!-- photo -->
+                        <label for="photo">Photo:</label>
+                        <input type="file" name="photo" id="photo" required> <br> 
+                    </td>
+                </tr>
+                
+             </table>
+
+        </fieldset>
+
+        <fieldset>
+            <legend><center>Residential Address Details</center></legend>
+
+            <!-- table starts -->
+            <table>
+                <!-- first row -->
+                <tr>
+                    <td>
+                        <!-- Applicant address -->
+                        <label for="applicantaddress">Applicant's Address:</label>
+                        <textarea name="applicantaddress" id="applicantaddress" cols="20" rows="4" required></textarea><br> 
+                    </td>
+                    <td>
+                        <!-- District -->
+                        <label for="district">District:</label>
+                        <select name="district" id="district" required>
+                            <option value="abc">ABC</option>
+                            <option value="def">DEF</option>
+                            <option value="ghi">GHI</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- second row -->
+                <tr>
+                    <td>
+                        <!-- mandal -->
+                        <label for="mandal">Mandal:</label>
+                        <select name="mandal" id="mandal" required>
+                            <option value="abc">ABC</option>
+                            <option value="def">DEF</option>
+                            <option value="ghi">GHI</option>
+                        </select>
+                    </td>
+                    <td>
+                        <!-- village -->
+                        <label for="village">Village:</label>
+                        <select name="village" id="village" required>
+                            <option value="abc">ABC</option>
+                            <option value="def">DEF</option>
+                            <option value="ghi">GHI</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- third row -->
+                <tr>
+                    <td>
+                        <!-- pincode -->
+                        <label for="pincode">Pin Code:</label>
+                        <input type="text" name="pincode" id="pincode" required maxlength="6"> <br>
+                    </td>
+                </tr>
+            </table> 
+        </fieldset>
+
+        <fieldset>
+            <legend><center>Pass Type Details</center></legend>
+
+            <!-- city -->
+            <label for="city">City:</label>
+            <select name="city" id="city" required>
+                <option value="abc">ABC</option>
+                <option value="def">DEF</option>
+                <option value="ghi">GHI</option>
+            </select> <br>
+
+            <!-- pass type -->
+            <label for="passtype">Pass Type:</label>
+            <select name="passtype" id="passtype" required>
+                <option value="type1">Type1</option>
+                <option value="type2">Type2</option>
+                <option value="type3">Type3</option>
+            </select> <br>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend><center>Mode of Payment and Pass Collection</center></legend>
+
+            <!-- payment mode -->
+            <label for="paymentmode">Payment Mode:</label>
+            <select name="paymentmode" id="paymentmode" required>
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+                <option value="upi">UPI</option>
+            </select> <br>
+
+            <!-- pass delivery mode -->
+            <label for="deliverymode">Pass Delivery Mode:</label>
+            <select name="deliverymode" id="deliverymode" required>
+                <option value="inperson">In Person</option>
+                <option value="post">Post</option>
+            </select> <br>
+
+             <!-- pass collection center -->
+             <label for="collectioncenter">Pass Collection Center:</label>
+             <select name="collectioncenter" id="collectioncenter" required>
+                <option value="abc">ABC</option>
+                <option value="def">DEF</option>
+                <option value="ghi">GHI</option>
+             </select> <br>
+
+        </fieldset>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit Details">
+
+    </form>
+</body>
+</html>
